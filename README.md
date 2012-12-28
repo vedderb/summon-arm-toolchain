@@ -19,7 +19,6 @@ sudo apt-get install build-essential git flex bison libgmp3-dev libmpfr-dev libn
 ./summon-arm-toolchain
 
 3. (Optional) add to path
-
 sudo su
 echo 'export PATH=/home/YOUR_USER/sat/bin:$PATH' > /etc/profile.d/arm_tools.sh
 exit
