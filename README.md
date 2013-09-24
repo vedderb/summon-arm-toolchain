@@ -7,7 +7,6 @@ I have made the following changes:
 * Updated newlib to version 2.0.0
 * Build the master branch of openocd (for STM32F4 support)
 * Added st-link support to the openocd build flags
-* Added a patch to open-ocd to avoid the gdb gpacket bug
 * Added support for tar.xz archive files
 * Removed unused code and patches
 * Adapted the gcc-t-arm patch for gcc 4.8

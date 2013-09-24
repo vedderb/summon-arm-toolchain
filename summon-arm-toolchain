@@ -430,11 +430,6 @@ if [ ${OOCD_EN} != 0 ]; then
 if [ ! -e ${STAMPS}/${OOCD}.build ]; then
     unpack ${OOCD}
     
-    log "Patching openocd to avoid gpacket bug"
-    cd ${OOCD}
-    patch -p1 -i ../patches/patch-openocd-gpacket-bug.diff
-    cd ..
-    
     cd build 
     log "Configuring openocd-${OOCD}"
     CFLAGS="${CFLAGS} ${OOCD_CFLAGS}" \
