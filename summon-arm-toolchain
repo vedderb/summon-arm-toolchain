@@ -318,7 +318,7 @@ if [ ${OOCD_EN} != 0 ]; then
 	if [ "x${OOCD_GIT}" == "x" ]; then
 		fetch ${OOCD} http://sourceforge.net/projects/openocd/files/openocd/0.5.0/${OOCD}.tar.bz2
 	else
-		clone oocd ${OOCD_GIT} git://openocd.git.sourceforge.net/gitroot/openocd/openocd ./bootstrap
+		clone oocd ${OOCD_GIT} git://git.code.sf.net/p/openocd/code ./bootstrap
 	fi
 fi
 
