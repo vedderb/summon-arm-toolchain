@@ -443,7 +443,7 @@ if [ ! -e ${STAMPS}/${OOCD}.build ]; then
 				 --disable-werror \
 				 --prefix=${PREFIX} \
 				 --enable-dummy \
-				 --enable-ft2232_libftdi \
+				 --enable-libftdi \
 				 --enable-usb_blaster_libftdi \
 				 --enable-ep93xx \
 				 --enable-at91rm9200 \
