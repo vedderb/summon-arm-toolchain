@@ -29,7 +29,7 @@ USE_LINARO=1
 # Set to 1 to enable building of OpenOCD
 OOCD_EN=1
 # Set to 'master' or a git revision number to use instead of stable version
-OOCD_GIT=master
+OOCD_GIT=  # master
 # Set to 1 to build libstm32 provided by ST
 LIBSTM32_EN=1
 # Set to 1 to build libopencm3 an open source library for Cortex M3 and simalar
@@ -134,9 +134,9 @@ fi
 
 BINUTILS=binutils-2.23.2
 NEWLIB=newlib-2.0.0
-OOCD=openocd-0.6.0
+OOCD=openocd-0.8.0-rc2
 LIBCMSIS=
-LIBCMSIS_GIT=v1.10-3
+LIBCMSIS_GIT=v1.10-4
 LIBSTM32=
 LIBSTM32_GIT=v3.0.0-2
 LIBSTM32USB=
@@ -335,7 +335,7 @@ fetch ${GDB} ${GDBURL}
 
 if [ ${OOCD_EN} != 0 ]; then
 	if [ "x${OOCD_GIT}" == "x" ]; then
-		fetch ${OOCD} http://sourceforge.net/projects/openocd/files/openocd/0.5.0/${OOCD}.tar.bz2
+		fetch ${OOCD} http://sourceforge.net/projects/openocd/files/openocd/0.8.0-rc2/${OOCD}.tar.bz2
 	else
 		clone oocd ${OOCD_GIT} git://openocd.git.sourceforge.net/gitroot/openocd/openocd ./bootstrap
 	fi
