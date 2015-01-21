@@ -498,7 +498,6 @@ if [ ! -e ${STAMPS}/${OOCD}.build ]; then
 				 --disable-werror \
 				 --prefix=${PREFIX} \
 				 --enable-dummy \
-				 --enable-ft2232_libftdi \
 				 --enable-usb_blaster_libftdi \
 				 --enable-ep93xx \
 				 --enable-at91rm9200 \
@@ -508,7 +507,8 @@ if [ ! -e ${STAMPS}/${OOCD}.build ]; then
 				 --enable-vsllink \
 				 --enable-rlink \
 				 --enable-stlink \
-				 --enable-arm-jtag-ew
+				 --enable-arm-jtag-ew \
+				 --enable-ftdi
     log "Building ${OOCD}"
     make ${MAKEFLAGS}
     install ${OOCD} install
