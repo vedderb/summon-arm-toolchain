@@ -395,7 +395,7 @@ if [ ! -e ${STAMPS}/${GCC}-${NEWLIB}.build ]; then
                       --disable-werror \
 		      --with-system-zlib \
 		      --disable-newlib-supplied-syscalls \
-		      ${GCCFLAGS}
+		      ${GCCFLAGS} CFLAGS="-fno-short-enums"
     log "Building ${GCC} and ${NEWLIB}"
     make ${MAKEFLAGS}
     install ${GCC} install
