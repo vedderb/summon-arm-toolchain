@@ -563,7 +563,9 @@ if [ ! -e ${STAMPS}/${LIBOPENCM3}.build ]; then
     cd ${LIBOPENCM3}
     log "Building ${LIBOPENCM3}"
     make PREFIX=${TARGET} DESTDIR=${DESTDIR}${DESTDIR:+/}${PREFIX}
-    install ${LIBOPENCM3} PREFIX=${TARGET} DESTDIR=${DESTDIR}${DESTDIR:+/}${PREFIX} install
+    #install ${LIBOPENCM3} PREFIX=${TARGET} DESTDIR=${DESTDIR}${DESTDIR:+/}${PREFIX} install
+    cp lib/*.{a,ld} ${PREFIX}/${TARGET}/lib
+    cp -rf include/* ${PREFIX}/${TARGET}/include
     cd ..
     log "Cleaning up ${LIBOPENCM3}"
     touch ${STAMPS}/${LIBOPENCM3}.build
