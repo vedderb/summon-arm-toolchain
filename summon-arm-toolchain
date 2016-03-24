@@ -25,7 +25,7 @@ SUDO=
 # Set to 1 to be quieter while running
 QUIET=0
 # Set to 1 to use linaro gcc instead of the FSF gcc
-USE_LINARO=1
+USE_LINARO=0
 # Set to 1 to enable building of OpenOCD
 OOCD_EN=1
 # Set to 'master' or a git revision number to use instead of stable version
@@ -110,14 +110,14 @@ echo "CPUS=$CPUS"
 ##############################################################################
 if [ ${USE_LINARO} == 0 ] ; then
 	# For FSF GCC:
-	GCCVERSION=4.5.2
+	GCCVERSION=5.3.0
 	GCC=gcc-${GCCVERSION}
 	GCCURL=http://ftp.gnu.org/gnu/gcc/${GCC}/${GCC}.tar.gz
 
 	# For FSF GDB:
-	GDBVERSION=7.3.1
+	GDBVERSION=7.11
 	GDB=gdb-${GDBVERSION}
-	GDBURL=http://ftp.gnu.org/gnu/gdb/${GDB}.tar.bz2
+	GDBURL=http://ftp.gnu.org/gnu/gdb/${GDB}.tar.gz
 else
 	# For Linaro GCC:
 	GCCRELEASE=4.8-2013.07-1
@@ -132,8 +132,8 @@ else
 	GDBURL=http://launchpad.net/gdb-linaro/7.6/${GDBRELEASE}/+download/${GDB}.tar.bz2
 fi
 
-BINUTILS=binutils-2.23.2
-NEWLIB=newlib-2.0.0
+BINUTILS=binutils-2.26
+NEWLIB=newlib-2.2.0
 OOCD=openocd-0.8.0-rc2
 LIBCMSIS=
 LIBCMSIS_GIT=v1.10-4
