@@ -387,8 +387,7 @@ if [ ! -e ${STAMPS}/${BINUTILS}.build ]; then
     unpack ${BINUTILS}
     # http://trac.cross-lfs.org/ticket/926
     # Fix a couple of syntax errors that prevent the documentation from building with Texinfo-5.1:
-    sed -i -e 's/@colophon/@@colophon/' -e 's/doc@cygnus.com/doc@@cygnus.com/' \
-	${BINUTILS}/bfd/doc/bfd.texinfo
+    # sed -i -e 's/@colophon/@@colophon/' -e 's/doc@cygnus.com/doc@@cygnus.com/' ${BINUTILS}/bfd/doc/bfd.texinfo
     cd build
     log "Configuring ${BINUTILS}"
     ../${BINUTILS}/configure --target=${TARGET} \
