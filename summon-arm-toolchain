@@ -110,7 +110,7 @@ echo "CPUS=$CPUS"
 ##############################################################################
 if [ ${USE_LINARO} == 0 ] ; then
 	# For FSF GCC:
-	GCCVERSION=5.3.0
+	GCCVERSION=6.1.0
 	GCC=gcc-${GCCVERSION}
 	GCCURL=http://ftp.gnu.org/gnu/gcc/${GCC}/${GCC}.tar.gz
 
@@ -133,7 +133,7 @@ else
 fi
 
 BINUTILS=binutils-2.26
-NEWLIB=newlib-2.2.0
+NEWLIB=newlib-2.4.0
 OOCD=openocd-0.8.0-rc2
 LIBCMSIS=
 LIBCMSIS_GIT=v1.10-4
