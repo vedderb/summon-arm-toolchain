@@ -1,7 +1,8 @@
 Based on https://github.com/esden/summon-arm-toolchain
 
 I have made the following changes:
-* Updated GCC to version 6.2 (avoid 6.1: https://gcc.gnu.org/bugzilla/show_bug.cgi?id=70830)
+* Updated GCC to version 6.4 (avoid 6.1: https://gcc.gnu.org/bugzilla/show_bug.cgi?id=70830)
+* Updated binutils to 2.28
 * Updated newlib to version 2.4
 * Include libopencm3 support as default
 
