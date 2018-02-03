@@ -1,10 +1,11 @@
 Based on https://github.com/esden/summon-arm-toolchain
 
 I have made the following changes:
-* Updated GCC to version 6.4 (avoid 6.1: https://gcc.gnu.org/bugzilla/show_bug.cgi?id=70830)
-* Updated binutils to 2.28
+* Updated GCC to version 7.3 
+* Updated binutils to 2.30
 * Updated newlib to version 2.4
 * Include libopencm3 support as default
+* Tested on FreeRTOS with libopencm3
 
 Usage on debian-based linux distributions (e.g. Ubuntu):
 
@@ -32,3 +33,5 @@ Also, see:
 http://vedder.se/2012/07/get-started-with-stm32f4-on-ubuntu-linux/
 
 for a complete tutorial
+
+Compile twice to get through the gcc failure (?!). Requires about 7 GB disk space.
