@@ -13,8 +13,7 @@ Usage on debian-based linux distributions (e.g. Ubuntu):
 
 sudo apt-get install build-essential git flex bison libgmp3-dev libmpfr-dev libncurses5-dev libmpc-dev autoconf texinfo libtool libftdi-dev libusb-1.0-0-dev zlib1g zlib1g-dev gcc
 
-
-2. Run the script
+2. Run the script (sometimes twice if the first time fails at install ?!)
 
 ./summon-arm-toolchain
 
@@ -34,4 +33,5 @@ http://vedder.se/2012/07/get-started-with-stm32f4-on-ubuntu-linux/
 
 for a complete tutorial
 
-Compile twice to get through the gcc failure (?!). Requires about 7 GB disk space.
+Requires about 7 GB disk space. The resulting toolchain was tested on STM32F1 and
+STM32F4, baremetal and running FreeRTOS (https://github.com/jmfriedt/tp_freertos).
