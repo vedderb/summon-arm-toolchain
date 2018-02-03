@@ -27,7 +27,7 @@ QUIET=0
 # Set to 1 to use linaro gcc instead of the FSF gcc
 USE_LINARO=0
 # Set to 1 to enable building of OpenOCD
-OOCD_EN=1
+OOCD_EN=0
 # Set to 'master' or a git revision number to use instead of stable version
 OOCD_GIT=  # master
 # Set to 1 to build libstm32 provided by ST
@@ -110,7 +110,7 @@ echo "CPUS=$CPUS"
 ##############################################################################
 if [ ${USE_LINARO} == 0 ] ; then
 	# For FSF GCC:
-	GCCVERSION=6.4.0
+	GCCVERSION=7.3.0
 	GCC=gcc-${GCCVERSION}
 	GCCURL=http://ftp.gnu.org/gnu/gcc/${GCC}/${GCC}.tar.gz
 
@@ -132,7 +132,7 @@ else
 	GDBURL=http://launchpad.net/gdb-linaro/7.6/${GDBRELEASE}/+download/${GDB}.tar.bz2
 fi
 
-BINUTILS=binutils-2.28
+BINUTILS=binutils-2.30
 NEWLIB=newlib-2.4.0
 OOCD=openocd-0.8.0-rc2
 LIBCMSIS=
