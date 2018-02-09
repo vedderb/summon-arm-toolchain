@@ -472,9 +472,11 @@ if [ ! -e ${STAMPS}/${GDB}.build ]; then
     log "Configuring ${GDB}"
     ../${GDB}/configure --target=${TARGET} \
                       --prefix=${PREFIX} \
+		      --with-guile=guile-2.0 \
                       --enable-multilib \
                       --disable-werror \
 		      ${GDBFLAGS}
+# guile-2.0 for Archlinux
     log "Building ${GDB}"
     make ${MAKEFLAGS}
     install ${GDB} install
