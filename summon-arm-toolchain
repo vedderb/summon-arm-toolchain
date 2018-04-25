@@ -133,7 +133,7 @@ else
 fi
 
 BINUTILS=binutils-2.30
-NEWLIB=newlib-2.4.0
+NEWLIB=newlib-2.5.0.20170922
 OOCD=openocd-0.8.0-rc2
 LIBCMSIS=
 LIBCMSIS_GIT=v1.10-4
